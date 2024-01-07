@@ -91,6 +91,30 @@
           p +
           "<br>"
       );
+
+      //9. Дано натуральне число. Знайти та вивести на сторінку всі його дільники
+      let naturalNum = +prompt("Введіть будь-яке натуральне число", "");
+      let count = 0,
+        sum1 = 0;
+      document.write(
+        `9. Знайти та вивести на сторінку всі дільники числа ${naturalNum}:<br>`
+      );
+      for (let i = 2; i * 2 <= naturalNum; i++) {
+        if (naturalNum % i == 0) {
+          document.write(` ${i};`);
+          if (i % 2 === 0) {
+            count++;
+            sum1 += i;
+          }
+        }
+      }
+
+      document.write(
+        `<br> 10. Кількість парних дільників числа ${naturalNum}: ${count} <br>`
+      );
+      document.write(
+        `11. Сума парних дільників числа ${naturalNum}: ${sum1} <br>`
+      );
     </script>
   </body>
 </html>
